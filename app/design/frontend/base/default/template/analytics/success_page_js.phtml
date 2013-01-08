@@ -1,0 +1,22 @@
+<?php
+/**
+ * Shopstream JS calling for all success pages is defined below:
+ */
+
+	$enabled_disabled = Mage::getStoreConfig(Shopstream_Analytics_Helper_Data::XML_PATH_ACTIVE); 
+	$shopstream_id = Mage::getStoreConfig(Shopstream_Analytics_Helper_Data::XML_PATH_ACCOUNT); 
+
+	if($enabled_disabled && $shopstream_id && $this->_isOrderTrackSa()) {
+
+
+?>
+<script type="text/javascript">
+var _shopstream = _shopstream || [];
+<?php echo $this->_getOrdersTrackingCodeSA(); ?>
+
+</script>
+<?php
+
+	}
+
+?>

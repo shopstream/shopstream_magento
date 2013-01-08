@@ -1,0 +1,18 @@
+<?php
+/**
+ * Shopstream JS calling for all pages is defined below:
+ */
+
+	$enabled_disabled = Mage::getStoreConfig(Shopstream_Analytics_Helper_Data::XML_PATH_ACTIVE); 
+	$shopstream_id = Mage::getStoreConfig(Shopstream_Analytics_Helper_Data::XML_PATH_ACCOUNT); 
+
+	if($enabled_disabled && $shopstream_id) {
+
+
+?>
+<script type="text/javascript" src="https://collector.shopstream.co/track-<?php echo $shopstream_id; ?>.js"></script>
+<?php
+
+	}
+
+?>

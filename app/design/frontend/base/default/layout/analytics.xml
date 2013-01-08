@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+			<block type="analytics/all_page_js" name="all_page_js" as="all_page_js" template="analytics/all_page_js.phtml"/>
+        </reference>
+		<reference name="head">
+            <block type="analytics/success_page_js" name="success_page_js" as="success_page_js" template="analytics/success_page_js.phtml" />
+        </reference>
+    </default>
+</layout>
